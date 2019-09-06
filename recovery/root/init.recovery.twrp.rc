@@ -4,6 +4,7 @@ on init
     chmod 0664 /dev/ion
     chown system system /dev/ion
     setprop ro.build.system_root_image true
+    export ANDROID_ROOT /system_root
 
     setprop ro.board.platform msm8937
 
