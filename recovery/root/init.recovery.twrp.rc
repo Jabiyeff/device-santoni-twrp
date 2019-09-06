@@ -3,6 +3,7 @@ on init
     chown system drmrpc /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
+    setprop ro.build.system_root_image true
 
     setprop ro.board.platform msm8937
 
