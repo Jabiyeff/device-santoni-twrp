@@ -1,6 +1,6 @@
 /system          ext4              /dev/block/bootdevice/by-name/system
 /system_image    emmc              /dev/block/bootdevice/by-name/system
-/vendor          ext4              /dev/block/bootdevice/by-name/cust       flags=wipeingui;display="Vendor"
+/vendor          ext4              /dev/block/bootdevice/by-name/cust       flags=wipeingui;display="Vendor";backup=1
 /vendor_image    emmc              /dev/block/bootdevice/by-name/cust
 /data            ext4              /dev/block/bootdevice/by-name/userdata   flags=encryptable=footer
 /cache           ext4              /dev/block/bootdevice/by-name/cache
