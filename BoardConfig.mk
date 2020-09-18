@@ -98,6 +98,8 @@ FOX_VERSION := R11.0
 FOX_R11 := 1
 OF_MAINTAINER := Jabiyeff
 OF_DISABLE_MIUI_OTA_BY_DEFAULT := 1
+OF_QUICK_BACKUP_LIST := /system;/vendor;/data;/persist;/boot;
+OF_USE_LOCKSCREEN_BUTTON := 1
 
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
