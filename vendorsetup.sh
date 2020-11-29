@@ -65,7 +65,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_R11=1
         export OF_USE_TWRP_SAR_DETECT=1
         export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
-        export OF_QUICK_BACKUP_LIST="/system;/vendor;/data;/persist;/boot;"
+        export OF_QUICK_BACKUP_LIST="/system_root;/vendor;/data;/persist;/boot;"
         # -- end R11 settings --
 
 	# let's log what are the build VARs that we used
