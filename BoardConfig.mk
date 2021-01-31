@@ -46,8 +46,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_RAMDISK_OFFSET := 0x01000000
-TARGET_KERNEL_SOURCE := kernel/xiaomi/santoni
-TARGET_KERNEL_CONFIG := santoni_treble_defconfig
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 
 # Encryption
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
