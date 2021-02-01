@@ -43,9 +43,10 @@ BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_RAMDISK_OFFSET := 0x01000000
-TARGET_PREBUILT_KERNEL := device/xiaomi/santoni/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 
 # Encryption
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
@@ -77,12 +78,14 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # TWRP Configuration
 TW_SCREEN_BLANK_ON_BOOT := true
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone7/temp"
 TW_EXTRA_LANGUAGES := true
 TW_THEME := portrait_hdpi
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_MAX_BRIGHTNESS := 255
+TW_DEFAULT_BRIGHTNESS := 100
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_SCREEN_BLANK_ON_BOOT := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
