@@ -48,10 +48,6 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 
-# Encryption
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
 
@@ -82,7 +78,6 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone7/temp"
 TW_EXTRA_LANGUAGES := true
 TW_THEME := portrait_hdpi
 TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 100

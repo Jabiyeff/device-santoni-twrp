@@ -20,5 +20,34 @@ service ldconfigtxt /sbin/touch /etc/ld.config.txt
     oneshot
     seclabel u:r:recovery:s0
 
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+    install_keyring
+
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
+
+on property:vendor.sys.listeners.registered=true
+    start keymaster-3-0
+    start gatekeeper-1-0
+
+on property:ro.crypto.fs_crypto_blkdev=*
+    stop sbinqseecomd
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+
+on property:twrp.all.users.decrypted=true 
+    stop sbinqseecomd
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+
+service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keymaster-3-0 /sbin/android.hardware.keymaster@3.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
