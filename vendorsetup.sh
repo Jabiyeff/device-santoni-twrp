@@ -56,18 +56,23 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_FORCE_MAGISKBOOT_BOOT_PATCH_MIUI="1"
    	export OF_NO_MIUI_OTA_VENDOR_BACKUP="1"
    	export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
-    export OF_MAINTAINER=Jabiyeff
+   	export OF_MAINTAINER=Jabiyeff
+   	export LC_ALL="C"
+   	export ALLOW_MISSING_DEPENDENCIES=true
 
 	# OTA for custom ROMs
         export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES="1"
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR="1"
 
         # -- add settings for R11 --
-        export FOX_R11="1"
         export OF_USE_TWRP_SAR_DETECT="1"
         export OF_DISABLE_MIUI_OTA_BY_DEFAULT="1"
         export OF_QUICK_BACKUP_LIST="/system_root;/vendor;/data;/persist;/boot;"
         # -- end R11 settings --
+
+        # -- Enable CCACHE --
+        export USE_CCACHE=1
+        export CCACHE_EXEC=/usr/bin/ccache
 
 	# let's log what are the build VARs that we used
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
