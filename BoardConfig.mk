@@ -96,6 +96,7 @@ RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_USE_TOOLBOX := true
 AB_OTA_UPDATER := false
+TARGET_USES_LOGD := true
 
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -105,3 +106,7 @@ TW_INCLUDE_FUSE_EXFAT := true
 
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
+
+# OEM otacert
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+    vendor/recovery/security/miui
