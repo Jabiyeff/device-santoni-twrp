@@ -30,4 +30,4 @@
 # Storages
 /storage        ext4      /data/media/0                                      flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 /sdcard1        auto      /dev/block/mmcblk1p1 /dev/block/mmcblk1            flags=display="MicroSD";storage;wipeingui;removable
-/usb-otg        auto      /dev/block/sda1      /dev/block/sda                flags=display="USB Storage";storage;wipeingui;removable
+/usb_otg        auto      /dev/block/sda1      /dev/block/sda                flags=display="USB Storage";storage;wipeingui;removable
