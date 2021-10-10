@@ -5,20 +5,20 @@ on init
     chown system system /dev/ion
     setprop ro.build.system_root_image true
     export ANDROID_ROOT /system_root
-    export LD_CONFIG_FILE /etc/ld.config.txt
+    export LD_CONFIG_FILE /vendor/etc/ld.config.txt
 
     setprop ro.board.platform msm8937
 
 # separate copy needed to use /sbin/linker64 instead of /system/bin/linker64
-service sbinqseecomd /sbin/qseecomd
+service qseecomd /vendor/bin/qseecomd
     disabled
     user root
     group root
     seclabel u:r:recovery:s0
 
-service ldconfigtxt /sbin/touch /etc/ld.config.txt
+service ldconfigtxt /sbin/touch /vendor/etc/ld.config.txt
     oneshot
     seclabel u:r:recovery:s0
 
 on property:ro.crypto.state=encrypted
-    start sbinqseecomd
+    start qseecomd

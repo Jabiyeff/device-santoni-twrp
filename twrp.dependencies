@@ -10,5 +10,11 @@
     "repository": "android_vendor_qcom_opensource_interfaces",
     "target_path": "vendor/qcom/opensource/interfaces",
     "revision": "lineage-18.1"
+  },
+  {
+    "remote": "LineageOS",
+    "repository": "android_hardware_interfaces",
+    "target_path": "hardware/interfaces",
+    "revision": "lineage-18.1"
   }
 ]
