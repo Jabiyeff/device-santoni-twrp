@@ -40,15 +40,12 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 androidboot.selinux=permissive
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 loop.max_part=7 androidboot.usbconfigfs=true androidboot.selinux=permissive
+BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_RAMDISK_OFFSET := 0x01000000
-TARGET_KERNEL_CONFIG := santoni_treble_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
-TARGET_KERNEL_CLANG_COMPILE := true
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 
 # Encryption
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
