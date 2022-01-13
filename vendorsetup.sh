@@ -54,7 +54,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
 	export OF_USE_SYSTEM_FINGERPRINT="1"
    	export OF_MAINTAINER=Jabiyeff
-   	export OF_MAINTAINER_AVATAR="~/ofrp/device/xiaomi/santoni/addon/avatar.jpg"
+   	export OF_MAINTAINER_AVATAR="/home/jabiyeff/ofrp/device/xiaomi/santoni/addon/avatar.jpg"
    	export LC_ALL="C"
    	export ALLOW_MISSING_DEPENDENCIES=true
 
@@ -75,7 +75,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         # -- end R11 settings --
 
         # use magisk 23.0 for the magisk addon
-        export FOX_USE_SPECIFIC_MAGISK_ZIP="~/ofrp/device/xiaomi/santoni/addon/Magisk-23.0.zip"
+        export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/jabiyeff/ofrp/device/xiaomi/santoni/addon/Magisk-23.0.zip"
 
         # -- Enable CCACHE --
         export USE_CCACHE=1
