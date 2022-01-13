@@ -53,7 +53,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_CONFIG := santoni_treble_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := latest
+TARGET_KERNEL_CLANG_VERSION := r437112b
 
 # Encryption
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
