@@ -58,9 +58,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export LC_ALL="C"
    	export ALLOW_MISSING_DEPENDENCIES=true
 
-	# run a process after formatting data to work-around MTP issues
-	export OF_RUN_POST_FORMAT_PROCESS="1"
-
    	# export OF_DISABLE_DM_VERITY_FORCED_ENCRYPTION="1"; # disabling dm-verity causes stability issues with some kernel 4.9 ROMs; but is needed for MIUI
    	export OF_FORCE_DISABLE_DM_VERITY_MIUI="1"
 	export OF_FORCE_MAGISKBOOT_BOOT_PATCH_MIUI="1"
