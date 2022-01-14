@@ -54,7 +54,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
 	export OF_USE_SYSTEM_FINGERPRINT="1"
    	export OF_MAINTAINER=Jabiyeff
-   	export OF_MAINTAINER_AVATAR="/home/jabiyeff/ofrp/device/xiaomi/santoni/addon/avatar.jpg"
+   	export OF_MAINTAINER_AVATAR="/home/jabiyeff/ofrp/device/xiaomi/santoni/addon/avatar.png"
    	export LC_ALL="C"
    	export ALLOW_MISSING_DEPENDENCIES=true
 
