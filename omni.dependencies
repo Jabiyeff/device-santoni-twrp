@@ -4,5 +4,17 @@
     "repository": "android_vendor_qcom_opensource_commonsys",
     "target_path": "vendor/qcom/opensource/commonsys",
     "revision": "android-9.0"
+  },
+  {
+    "remote": "github",
+    "repository": "Jabiyeff/msm-4.9-santoni-kud",
+    "target_path": "kernel/xiaomi/msm8937",
+    "revision": "recovery-kernel"
+  },
+  {
+    "remote": "github",
+    "repository": "crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r416183b1",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-r416183b1",
+    "revision": "11.0"
   }
 ]
