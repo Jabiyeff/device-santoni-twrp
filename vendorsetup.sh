@@ -57,6 +57,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export OF_MAINTAINER_AVATAR="/home/jabiyeff/ofrp/device/xiaomi/santoni/addon/avatar.png"
    	export LC_ALL="C"
    	export ALLOW_MISSING_DEPENDENCIES=true
+    export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=true
 
    	# export OF_DISABLE_DM_VERITY_FORCED_ENCRYPTION="1"; # disabling dm-verity causes stability issues with some kernel 4.9 ROMs; but is needed for MIUI
    	export OF_FORCE_DISABLE_DM_VERITY_MIUI="1"
@@ -67,7 +68,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR="1"
 
         # -- add settings for R11 --
-        export FOX_VERSION="R11.1_3"
+        export FOX_VERSION="R11.1_4"
         export FOX_BUILD_TYPE=Stable
         export OF_USE_TWRP_SAR_DETECT="1"
         export OF_DISABLE_MIUI_OTA_BY_DEFAULT="1"
