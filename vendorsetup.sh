@@ -77,7 +77,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         # -- end R11 settings --
 
         # use magisk 23.0 for the magisk addon
-        export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/jabiyeff/ofrp/device/xiaomi/santoni/addon/Magisk-24.1.zip"
+        export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/jabiyeff/ofrp/device/xiaomi/santoni/addon/Magisk-v25.2.zip"
 
         # -- Enable CCACHE --
         export USE_CCACHE=1
